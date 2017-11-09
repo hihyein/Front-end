@@ -1,0 +1,187 @@
+/*common settings*/
+html {
+  font-size: 15px; /* 1rem == 15px */
+  line-height: 1.6; /* 24px/15px = 1.6 */
+}
+
+* { /*모든 요소*/
+  font-family: 'Open Sans', sans-serif;
+  color: #181818;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+} /*a에 포인터 올려놨을 때 변하지 않게*/
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+} /* 버튼에 포인터 올려놨을 때 모양이 바뀌게 */
+
+button:focus {
+  outline: none;
+} /* 버튼을 눌렀을 때 outline(파랗게 생기는 선)을 없앰 */
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* header */
+h1.brand {
+  margin: 0;
+  font-family: 'Kopub Batang', serif;
+  font-size: 1.3333333rem;
+  font-weight: 400;
+  line-height: 1; /**/
+}
+
+.brand a {
+  font-family: inherit; /* a태그가 특수해서 직접 지정을 해줘야 할 때가 있음 (부모 상속) */
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-toggler  {
+  font-size: 0.933333333rem;
+  font-weight: 700;
+  line-height: 1.43rem;
+  letter-spacing: 0.21em; /* em도 rem과 같은 것*/
+  color: #181818;
+}
+
+.navbar-light .nav-item.active .nav-link{
+  color: #ff5216;
+}
+
+.header:not(.header__bg) {
+  /*.header__bg 제외한 header부분*/
+  margin-bottom: 4rem;
+}
+
+
+.header__bg {
+  height: 500px;
+  background-image: linear-gradient(to bottom, transparent 0%, #fff 100%), url(../assets/bg-header.jpg); /*../하면 폴더 밖으로 나감*/
+  /* linear-gradient(방샹, 시작점, 끝점): 사진 그라데이션 */
+  /* to bottom, transparent 0%, red 50%, #fff 100%: (0%지점에서 투명, 50%지점에서 빨강, 100%지점에서 흰색) */
+  background-size: cover; /* 500px 700px로 하면 이미지 사이즈 */
+  /* cover나 contain등의 옵션 사용 가능
+  bg-image에서 속성값이 두 개이기 때문에 나머지도 속성을 두 개씩 줘야 함
+  이 경우 같은 값이므로 cover cover말고 cover 하나만 써줘도 됨 ()아래 옵션들도 마찬가지) */
+  background-repeat: no-repeat; /*사진반복*/
+  background-position: center; /*10px 50px; 이런 식으로 설정 가능*/
+}
+
+
+/* Main / Post */
+
+.posts {  /*main으로 줘도 됨*/
+  padding-bottom: 100px;
+}
+
+.post__item:nth-child(2n) {
+  text-align: right;
+} /*post__item의 2n번째(짝수) 자식은 오른쪽 정렬*/
+
+.post__title {
+  font-family: 'Kopub Batang', serif;
+  /* Kopub 쓰고 없으면 serif */
+  font-size: 3.2rem;
+  line-height: 1.25;
+}
+
+.post__text {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.post__text em {
+  font-weight: 700;
+  font-style: normal;
+  /* em으로 강조 넣으니까 italic체 되어서 normal로 바꾸고 bold를 700으로 넣었음*/
+}
+
+.post__date {
+  font-family: 'Kopub Batang', serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 2;
+  color: #8d8d8d;
+}
+
+
+/* Footer */
+
+.footer {
+  text-align: center;  /*이미지도 inline이기 때문에 text처럼 가운데정렬된다.*/
+  background-color: #fbfbfb;
+}
+
+.author__name {
+  font-size: 1.2rem; /* 18/15 = 1.2 */
+  font-weight: 700;
+  line-height: 1.3333333;
+}
+
+.btn-subscribe {
+  border: 1px solid #1fb6ff;
+  /* border 굵기 모양(solid, dotted 등) 색상 */
+  border-radius: 100px;
+  /*100px만큼 깎임*/
+  font-size: 0.8rem;
+  line-height: 1.25;
+  color: #1fb6ff;
+  transition: 0.2s all ease-in-out;
+  /* 뾱 바뀌는 게 아니라 스르륵 바뀌는 것
+  duration, 모든 속성에 변화?[color, background-color 등], 바뀌는 속도(스르륵)[ease-out?] */
+}
+
+.btn-subscribe:hover, /* 마우스 올렸을 때 */
+.btn-subscribe:focus { /* 클릭했을 때 */
+  background-color: #1fb6ff;
+  color: #ffffff;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  line-height: 2;
+  color: #8d8d8d;
+  margin-bottom: 0; /* bootstrap에서 기본적으로 margin-bottom을 설정해놓았음 */
+}
+
+.author__img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%; /* 충분히 큰 값을 주면 사진을 깎을 수 있음 */
+  overflow: hidden; /* 사진 넘치면 가리기 */
+}
+
+.author__img img {
+  width: 100%;  /*부모의 content box 크기(80px)만큼*/
+  height: auto;  /*width에 따라 알아서 조절*/
+}
+
+
+/* post nav */
+
+.post__nav_item .post__title {
+  /*post__nav_item 안에 있는 post__title*/
+  font-size: 2.1333333rem;
+  line-height: 1.25;
+}
+
+.post__nav_item .post__text {
+  font-size: 0.87rem;
+  line-height: 1.54;
+}
+
+.post__nav_item .post__date {
+  font-size: 0.73rem;
+  line-height: 1.82;
+}

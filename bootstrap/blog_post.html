@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>차근차근 부트스트랩 | Blog</title>
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejumyeongjo.css">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <!-- your custom css -->
+  <!-- <link rel="stylesheet" href="css/custom.css"> -->
+  <link rel="stylesheet" href="css/blog_custom.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar navbar-toggleable-md navbar-light"> <!-- bg-faded-->
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        메뉴<!-- <span class="navbar-toggler-icon"></span> -->
+      </button>
+      <h1 class="brand">
+        <a class="navbar-brand" href="#">혜인의 블로그</a>
+      </h1>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <!--justify-content-end: 메뉴 옆으로 옮김-->
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home<span class="sr-only">(현재 페이지)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">시</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown link
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<!-- // Header -->
+
+<!-- container 안에 row 안에 column 순서로!!! -->
+
+<!-- Main -->
+<main class="main container">
+  <article class="post mb-5">
+    <header class="post__header row mb-5">
+      <div class="col-12 col-lg-6 push-lg-3">
+        <h2 class="post__title mb-4">
+          어려운 일도<br>
+          아닌데<br>
+          괜한 자존심<br>
+          때문에<br>
+        </h2>
+        <p class="post__text">하상욱 단편시집 <em>[좋아요]</em> 중에서 ㅡ</p>
+        <p class="post__date">Jan 01, 2017</p>
+      </div>
+    </header>
+    <div class="post__contents">
+      <div class="row">
+        <div class="col-12 col-lg-6 push-lg-3">
+          <p class-"mb-4">외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다. 모든 국민은 법 앞에 평등하다. 누구든지 성별·종교 또는 사회적 신분에 의하여 정치적·경제적·사회적·문화적 생활의 모든 영역에 있어서 차별을 받지 아니한다. 농업생산성의 제고와 농지의 합리적인 이용을 위하거나 불가피한 사정으로 발생하는 농지의 임대차와 위탁경영은 법률이 정하는 바에 의하여 인정된다.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-6 push-lg-3">
+          <p class-"mb-4">국교는 인정되지 아니하며, 종교와 정치는 분리된다. 재판의 전심절차로서 행정심판을 할 수 있다. 행정심판의 절차는 법률로 정하되, 사법절차가 준용되어야 한다. 위원은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니한다. 모든 국민은 종교의 자유를 가진다. 국가는 균형있는 국민경제의 성장 및 안정과 적정한 소득의 분배를 유지하고, 시장의 지배와 경제력의 남용을 방지하며, 경제주체간의 조화를 통한 경제의 민주화를 위하여 경제에 관한 규제와 조정을 할 수 있다.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-6 push-lg-3">
+          <p class-"mb-4">헌법재판소는 법관의 자격을 가진 9인의 재판관으로 구성하며, 재판관은 대통령이 임명한다. 정당은 법률이 정하는 바에 의하여 국가의 보호를 받으며, 국가는 법률이 정하는 바에 의하여 정당운영에 필요한 자금을 보조할 수 있다. 국정의 중요한 사항에 관한 대통령의 자문에 응하기 위하여 국가원로로 구성되는 국가원로자문회의를 둘 수 있다.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="post__nav row">
+    <a href="#" class="post__nav_item d-block col-12 col-md-6 col-lg-3 offset-lg-3 mb-4 mb-md-0">
+      <!-- column을 block으로 줘야 하므로 inline인 a태그를 d-block으로 바꿈 -->
+      <!-- offset: a태그 2개에 push-lg-3 이렇게 일일이 밀지 않고 하나만 밀면 둘 다 같이 밀리게 -->
+      <!-- mb-4 mb-md-0: margin-bottom을 4 넣되 md사이즈일 때는 0 -->
+      <h4 class="post__title mb-3">
+        너의 진짜 모습<br>
+        나의 진짜 모습<br>
+        사라졌어
+      </h4>
+      <p class="post__text">하상욱 단편시집 <em>포토샵</em> 중에서 ㅡ</p>
+      <p class="post__date">Jan 01, 2017</p>
+    </a>
+    <a href="#" class="post__nav_item d-block col-12 col-md-6 col-lg-3">
+      <h4 class="post__title mb-3">
+        생각의 차이일까<br>
+        오해의 문제일까
+      </h4>
+      <p class="post__text">하상욱 단편시집 <em>미용실</em> 중에서 ㅡ</p>
+      <p class="post__date">Jan 01, 2017</p>
+    </a>
+  </div>
+</main>
+<!-- //Main -->
+
+
+<!-- Footer -->
+<footer class="footer py-5">
+  <!-- py-5: footer 위아래로 padding을 넣음 -->
+  <div class="author__img mx-auto mb-3">
+    <!-- m-auto: div라서 block을 가지는데 이 안에 속한 img에 width값을 정해놔서 margin이 생겨버림 -> m-auto라고 하면 가운데정렬할 수 있음 -->
+    <img src="assets/img-author.png" alt>
+    <!-- 이미지를 둥글게 만들기 위해서 div에 넣음 -->
+  </div>
+  <h2 class="author__name mb-2">구혜인</h2>
+  <p class="author__text mb-3">
+    Bootstrap을 공부하고 있습니다.<br>
+    예쁘게 만들고 싶어요.
+  </p>
+  <button class="btn-subscribe px-3 py-2 mb-5" type="button">구독하기</button>
+  <!-- px-3: 좌우에 3만큼(1rem?씩) 여백 -->
+  <p class="copyright">&copy; 2017 Likelion. All Rights Reserved.</p>
+</footer>
+<!-- // Footer -->
+
+
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"   integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
